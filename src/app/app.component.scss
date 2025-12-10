@@ -123,6 +123,11 @@ mat-sidenav-container {
   .nav-button-divider {
     display: none;
   }
+
+  .theme-selector-container {
+    margin-top: variables.$space-s;
+    padding: 0 4px;
+  }
 }
 
 .offline-info {

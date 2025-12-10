@@ -10,6 +10,10 @@ export enum AndActionTheme {
   AUTO_THEME = 'auto-theme',
   LIGHT_THEME = 'light-theme',
   DARK_THEME = 'dark-theme',
+  NEON_GLOW = 'neon-glow-theme',
+  CYBERPUNK = 'cyberpunk-theme',
+  AURORA = 'aurora-theme',
+  MATRIX = 'matrix-theme',
 }
 
 const THEME_LOCAL_STORAGE_KEY = 'theme';

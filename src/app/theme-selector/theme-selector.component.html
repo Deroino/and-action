@@ -1,0 +1,23 @@
+<div class="theme-selector">
+  <mat-select
+    [value]="selectedTheme"
+    (selectionChange)="onThemeChange($event.value)"
+    class="theme-select"
+    panelClass="theme-select-panel"
+    aria-label="Theme selector"
+  >
+    <mat-select-trigger>
+      <mat-icon class="theme-icon">{{ getThemeIcon(selectedTheme) }}</mat-icon>
+      <span class="theme-label">{{ getThemeLabel(selectedTheme) }}</span>
+    </mat-select-trigger>
+
+    @for (theme of themes; track theme.value) {
+      <mat-option [value]="theme.value" class="theme-option">
+        <div class="option-content">
+          <mat-icon class="option-icon">{{ theme.icon }}</mat-icon>
+          <span class="option-label">{{ theme.label }}</span>
+        </div>
+      </mat-option>
+    }
+  </mat-select>
+</div>

@@ -104,29 +104,9 @@
       <span>Logout</span>
     </a>
     <mat-divider></mat-divider>
-    <mat-button-toggle-group
-      name="theme"
-      aria-label="Theme"
-      [ngModel]="selectedTheme"
-      (ngModelChange)="selectedThemeChange($event)"
-      [hideSingleSelectionIndicator]="true"
-    >
-      <mat-button-toggle [value]="andActionThemeEnum.AUTO_THEME" title="Auto">
-        <mat-icon>contrast</mat-icon>
-      </mat-button-toggle>
-      <mat-button-toggle
-        [value]="andActionThemeEnum.LIGHT_THEME"
-        title="Light theme"
-      >
-        <mat-icon>light_mode</mat-icon>
-      </mat-button-toggle>
-      <mat-button-toggle
-        [value]="andActionThemeEnum.DARK_THEME"
-        title="Dark theme"
-      >
-        <mat-icon>dark_mode</mat-icon>
-      </mat-button-toggle>
-    </mat-button-toggle-group>
+    <div class="theme-selector-container">
+      <ana-theme-selector></ana-theme-selector>
+    </div>
   </mat-sidenav>
 
   <mat-sidenav-content class="main-content">

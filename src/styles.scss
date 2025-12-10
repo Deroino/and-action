@@ -1,5 +1,9 @@
 @use '@angular/material' as mat;
 @use 'm3-theme' as m3;
+@use 'themes/neon-glow-theme' as neon-glow;
+@use 'themes/cyberpunk-theme' as cyberpunk;
+@use 'themes/aurora-theme' as aurora;
+@use 'themes/matrix-theme' as matrix;
 
 @use './theme-styles' as theme-styles;
 @use 'app/actions-dashboard-config/actions-dashboard-config.component.theme' as
@@ -29,6 +33,7 @@
   @include mat.button-theme($theme);
   @include mat.button-toggle-theme($theme);
   @include mat.checkbox-theme($theme);
+  @include mat.select-theme($theme);
   @include mat.dialog-theme($theme);
   @include mat.divider-theme($theme);
   @include mat.form-field-theme($theme);
@@ -61,6 +66,7 @@
   @include mat.button-color($theme);
   @include mat.button-toggle-color($theme);
   @include mat.checkbox-color($theme);
+  @include mat.select-color($theme);
   @include mat.dialog-color($theme);
   @include mat.divider-color($theme);
   @include mat.form-field-color($theme);
@@ -104,6 +110,10 @@ html {
 
 .dark-theme {
   @include component-colors(m3.$dark-theme);
+}
+
+.neon-glow-theme, .cyberpunk-theme, .aurora-theme, .matrix-theme {
+  // Custom themes are already applied via their CSS classes
 }
 
 .mat-mdc-dialog-container {

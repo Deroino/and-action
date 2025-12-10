@@ -1,0 +1,242 @@
+@use '../../variables';
+
+.theme-selector {
+  width: 95%;
+}
+
+.theme-select {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 8px;
+  color: #f5f5f5;
+  font-size: 14px;
+  padding: 4px 8px;
+
+  .mat-mdc-select-value {
+    color: white !important;
+  }
+
+  .mat-mdc-select-arrow {
+    color: white !important;
+  }
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.14);
+    border-color: rgba(255, 255, 255, 0.35);
+  }
+
+  &:focus-within {
+    background: rgba(255, 255, 255, 0.16);
+    border-color: rgba(255, 255, 255, 0.45);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.25);
+  }
+}
+
+.mat-mdc-select-trigger {
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  min-height: 36px !important;
+  padding: 2px 0 !important;
+}
+
+.theme-icon {
+  font-size: 18px !important;
+  width: 18px !important;
+  height: 18px !important;
+  color: white !important;
+}
+
+.theme-label {
+  color: #f5f5f5 !important;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+// 下拉面板样式
+::ng-deep .theme-select-panel {
+  background: rgba(30, 30, 30, 0.95) !important;
+  backdrop-filter: blur(10px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3) !important;
+  padding: 8px !important;
+  max-height: 320px !important;
+
+  // 隐藏默认滚动条
+  &::-webkit-scrollbar {
+    display: none !important;
+  }
+
+  // Firefox
+  scrollbar-width: none !important;
+
+  // IE/Edge
+  -ms-overflow-style: none !important;
+
+  .mat-mdc-option {
+    color: white !important;
+    border-radius: 8px !important;
+    margin: 2px 0 !important;
+    transition: all 0.2s ease !important;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.1) !important;
+    }
+
+    &.mat-mdc-option-selected {
+      background: rgba(255, 255, 255, 0.2) !important;
+
+      .option-icon {
+        color: #4fc3f7 !important;
+      }
+    }
+  }
+}
+
+.option-content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 4px 0;
+}
+
+.option-icon {
+  font-size: 20px !important;
+  width: 20px !important;
+  height: 20px !important;
+  color: rgba(255, 255, 255, 0.8) !important;
+  transition: color 0.2s ease !important;
+}
+
+.option-label {
+  font-weight: 500;
+  font-size: 14px;
+}
+
+// 特殊主题下的样式增强
+:host-context(.light-theme) {
+  .theme-select {
+    background: rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(0, 0, 0, 0.18);
+    color: #1f1f1f;
+
+    .mat-mdc-select-value {
+      color: #1f1f1f !important;
+    }
+
+    .mat-mdc-select-arrow {
+      color: #1f1f1f !important;
+    }
+
+    &:hover {
+      background: rgba(0, 0, 0, 0.08);
+      border-color: rgba(0, 0, 0, 0.28);
+    }
+
+    &:focus-within {
+      background: rgba(0, 0, 0, 0.1);
+      border-color: rgba(0, 0, 0, 0.35);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.12);
+    }
+  }
+
+  .theme-icon,
+  .theme-label {
+    color: #1f1f1f !important;
+  }
+
+  .option-icon {
+    color: #1f1f1f !important;
+  }
+
+  ::ng-deep .theme-select-panel {
+    background: rgba(255, 255, 255, 0.98) !important;
+    border: 1px solid rgba(0, 0, 0, 0.08) !important;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12) !important;
+
+    .mat-mdc-option {
+      color: #1f1f1f !important;
+      .option-icon {
+        color: #1f1f1f !important;
+      }
+
+      &:hover {
+        background: rgba(0, 0, 0, 0.04) !important;
+      }
+
+      &.mat-mdc-option-selected {
+        background: rgba(0, 0, 0, 0.08) !important;
+
+        .option-icon {
+          color: #147ad1 !important;
+        }
+      }
+    }
+  }
+}
+
+.neon-glow-theme {
+  .theme-select {
+    border-color: var(--neon-primary);
+    box-shadow: 0 0 10px rgba(255, 0, 110, 0.3);
+
+    &:focus-within {
+      box-shadow: 0 0 20px rgba(255, 0, 110, 0.6);
+    }
+  }
+
+  .theme-icon {
+    color: var(--neon-primary) !important;
+    filter: drop-shadow(0 0 3px var(--neon-primary));
+  }
+}
+
+.cyberpunk-theme {
+  .theme-select {
+    border-color: var(--cyber-primary);
+    font-family: 'Courier New', monospace;
+    text-transform: uppercase;
+
+    &:focus-within {
+      box-shadow: 0 0 15px rgba(0, 255, 65, 0.6);
+    }
+  }
+
+  .theme-icon {
+    color: var(--cyber-primary) !important;
+  }
+}
+
+.aurora-theme {
+  .theme-select {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 255, 136, 0.3);
+
+    &:focus-within {
+      border-color: rgba(0, 212, 255, 0.6);
+      box-shadow: 0 0 20px rgba(0, 212, 255, 0.4);
+    }
+  }
+}
+
+.matrix-theme {
+  .theme-select {
+    border-color: var(--matrix-green);
+    font-family: 'Courier New', monospace;
+    background: rgba(0, 255, 65, 0.05);
+
+    &:focus-within {
+      background: rgba(0, 255, 65, 0.1);
+      box-shadow: 0 0 10px rgba(0, 255, 65, 0.5);
+    }
+  }
+
+  .theme-icon {
+    color: var(--matrix-green) !important;
+    text-shadow: 0 0 3px var(--matrix-green);
+  }
+}
