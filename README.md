@@ -18,7 +18,7 @@
 
 </div>
 
-And Action is a webapp to monitor your GitHub Actions available on [https://andaction-next.netlify.app/](https://andaction-next.netlify.app/).
+And Action is a webapp to monitor your GitHub Actions available on [https://and-action-next.pages.dev/](https://and-action-next.pages.dev/).
 It allows you to keep track of the state of all repositories relevant to you in one single place.
 
 It shows the current state of GitHub Actions workflows for your repositories' main branches.
@@ -50,7 +50,7 @@ And Action needs the following permissions:
 
 ### Getting Started
 
-Open your browser and navigate to [https://andaction-next.netlify.app/](https://andaction-next.netlify.app/).
+Open your browser and navigate to [https://and-action-next.pages.dev/](https://and-action-next.pages.dev/).
 
 When logging in to And Action for the first time, you will be asked to select repositories that you want to monitor. The list shows all your personal repositories as well as organizations' repositories that you are member of. Use the checkboxes next to the repositories that you want to monitor and click save.
 
@@ -376,9 +376,9 @@ The local login api serves a simple implementation of the login api for And Acti
 
 ### Releases
 
-New features are developed in separate feature branches. Pushing them to GitHub runs the CI workflow in GitHub actions. Merging a feature branch to master also runs the CI workflow. Additionally, the app is deployed on `https://staging.andaction.dev`.
+New features are developed in separate feature branches. Pushing them to GitHub runs the CI workflow in GitHub actions. Merging a feature branch to master also runs the CI workflow.
 
-Creating a GitHub release deploys the app to production on `https://andaction-next.netlify.app/`. 
+The app is deployed on Cloudflare Pages with automatic deployments on push to master at [https://and-action-next.pages.dev/](https://and-action-next.pages.dev/). 
 
 
 ### Renovate

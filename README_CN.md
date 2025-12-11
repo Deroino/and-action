@@ -17,7 +17,7 @@
 
 </div>
 
-And Action 是一个用于监控 GitHub Actions 的网络应用，可在 [https://andaction-next.netlify.app/](https://andaction-next.netlify.app/) 访问。
+And Action 是一个用于监控 GitHub Actions 的网络应用，可在 [https://and-action-next.pages.dev/](https://and-action-next.pages.dev/) 访问。
 它让您能够在一个地方跟踪所有相关仓库的状态。
 
 它显示您仓库主分支的 GitHub Actions 工作流当前状态。
@@ -47,7 +47,7 @@ And Action 需要以下权限：
 
 ### 入门指南
 
-在浏览器中打开 [https://andaction-next.netlify.app/](https://andaction-next.netlify.app/)。
+在浏览器中打开 [https://and-action-next.pages.dev/](https://and-action-next.pages.dev/)。
 
 首次登录 And Action 时，系统会要求您选择要监控的仓库。列表显示您的所有个人仓库以及您所属组织的仓库。使用要监控仓库旁边的复选框，然后点击保存。
 
@@ -373,9 +373,9 @@ deployment:
 
 ### 发布
 
-新功能在单独的功能分支中开发。将它们推送到 GitHub 会运行 GitHub Actions 中的 CI 工作流。将功能分支合并到 master 也会运行 CI 工作流。此外，应用程序部署在 `https://staging.andaction.dev` 上。
+新功能在单独的功能分支中开发。将它们推送到 GitHub 会运行 GitHub Actions 中的 CI 工作流。将功能分支合并到 master 也会运行 CI 工作流。
 
-创建 GitHub 版本会将应用程序部署到 `https://andaction-next.netlify.app/` 上的生产环境。
+应用部署在 Cloudflare Pages 上，每次推送到 master 分支会自动部署至 [https://and-action-next.pages.dev/](https://and-action-next.pages.dev/)。
 
 
 ### Renovate
